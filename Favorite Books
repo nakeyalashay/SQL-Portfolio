@@ -1,0 +1,14 @@
+
+/**Favorite Book:
+Mirror me (5.0)
+Harry Potter (5.0)
+NCLEX RN (1.0) **/
+
+CREATE TABLE favorite_books (id REAL, book_name TEXT, rating INTEGER);
+
+INSERT into favorite_books VALUES (1, "Mirror Me", 5.0);
+INSERT into favorite_books VALUES (2, "Harry Potter", 5.0);
+INSERT into favorite_books VALUES (3, "NCLEX RN", 1.0);
+SELECT* FROM favorite_books
+
+A table was built based on data inserted about my favorite books. A query search ran to see all data within table.
