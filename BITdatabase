@@ -1,0 +1,36 @@
+SELECT* FROM FebSales;
+
+SELECT Product, Quantity
+FROM FebSales
+WHERE location= 'Los Angeles';
+
+SELECT Product, SUM(quantity)
+FROM BIT_DB.FebSales
+WHERE location like '%Los Angeles%'
+GROUP BY Product
+
+SELECT SUM(Quantity), Product
+FROM BIT_DB.JanSales
+GROUP BY Product
+HAVING Quantity >=3;
+
+SELECT*
+FROM BIT_DB.JanSales
+WHERE location like '%New York%'
+GROUP BY location
+HAVING Quantity>=3
+
+SELECT product, SUM(quantity)
+FROM BIT_DB.FebSales
+WHERE product like '%Headphones%'
+GROUP BY product
+
+SELECT Product, AVG(quantity)
+FROM customers
+JOIN BIT_DB.FebSales
+ON Febsales.orderID=customers.order_id
+
+SELECT product, SUM(price) AS Total_revenue
+FROM JanSales
+GROUP BY product
+ORDER BY price desc;
