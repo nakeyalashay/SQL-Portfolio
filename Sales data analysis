@@ -1,0 +1,37 @@
+SELECT*
+FROM chinook.albums;
+
+SELECT name, MAX(UnitPrice)
+FROM chinook.tracks
+ORDER BY UnitPrice desc;
+
+SELECT FirstName, LastName, Country
+FROM chinook.customers
+WHERE Country='Brazil';
+
+SELECT FirstName, LastName, Country
+FROM chinook.customers
+WHERE Country<>'US';
+
+SELECT FirstName, LastName, Title
+FROM chinook.employees
+WHERE Title= 'Sales Support Agent';
+
+SELECT ReportsTo
+FROM chinook.employees;
+
+Select DISTINCT BillingCountry
+FROM chinook.invoices;
+
+Select invoiceId
+FROM chinook.invoices
+
+SELECT InvoiceId, InvoiceDate
+FROM chinook.invoices
+WHERE InvoiceDate>=2009;
+
+SELECT SUM(p.UnitPrice), d.InvoiceDate
+FROM chinook.invoice_items p
+JOIN chinook.invoices d
+ON p.InvoiceId=d.InvoiceId
+WHERE InvoiceDate>=2009;
