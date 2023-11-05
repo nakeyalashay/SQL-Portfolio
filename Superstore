@@ -28,23 +28,25 @@ VALUES
 SELECT item_name, price
 FROM superstore
 ORDER BY price desc;
+This query outlines the item and and prices from superstore table, placing them in descending order. This query is helpful to obtain a full visualization of items that are top sellers to items that do not sell well. Which
+in turn, helps the company determine which items to keep in stock.
 
 SELECT SUM(price), item_name
 FROM superstore
 GROUP BY item_name;
+This SQL code outlines the item name from superstore table aggregating the sum of items grouped by item name. This query is helpful to visualize the items that brings in the most profit for a company.
 
 SELECT MAX(price), 'KitchenSupplies'
 FROM superstore
 GROUP BY 'KitchenSupplies';
+This SQL aggregates the max price of kitchen supplies form the super store table grouped by kitchen supplies. This query outlines the most expensive kitchen item for sale.
 
 SELECT stock_quantity, 'AirPurifier'
 FROM superstore;
+This sQL outlines the quanitiy of air purifiers in the superstore table. This query is helpful when a count of supplies is needed in order to determine whether extra items should be purchased.
 
 SELECT MAX(average_rating), 'CottonBeddingSet'
 FROM superstore;
 
-First SQL outlines the item and and prices from superstore table, placing them in descending order
-Second SQL code outlines the itme name from superstore table aggregating the sum of items grouped by item name
-Third SQL aggregates the max price of kitchen supplies form the super store table grouped by kitchen supplies
-Fourth sQL outlines the quanitiy of air purifiers in the superstore table
-Fifth SQL outlines the max average rating for cotton bedding set from the superstore table
+This SQL query outlines the max average rating for cotton bedding set from the superstore table. This query is helpful in recognizing if an item is enjoyed by customers and should remain in stock. 
+
